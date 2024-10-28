@@ -1,0 +1,22 @@
+package com.mbs.service;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import com.mbs.entities.Sales;
+import com.mbs.repository.SalesRepository;
+
+public class SalesService {
+	
+	private SalesRepository salesRepository;
+	
+	public void recordSales(Sales sales) {
+		salesRepository.save(sales);
+		
+		
+		
+	}
+	public List<Sales> getSalesForMonth(Long customerId,LocalDate startDate,LocalDate endDate){
+		return salesRepository.findByCustomerIdAndDateBetween(customerId, startDate, endDate);
+	}
+}

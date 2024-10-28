@@ -1,0 +1,14 @@
+package com.mbs.service;
+
+import com.mbs.entities.Customer;
+import com.mbs.repository.CustomerRepository;
+
+public class CustomerService {
+	private CustomerRepository customerRepository;
+	
+	public Customer addCustomer(Customer customer ) {
+		return customerRepository.save(customer);
+	
+	}
+
+}

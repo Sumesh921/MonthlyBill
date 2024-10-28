@@ -1,0 +1,8 @@
+package com.mbs.repository;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.mbs.entities.Sales;
+
+public interface SalesRepository extends JpaRepository<Sales, Long> {
+
+}

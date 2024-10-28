@@ -1,0 +1,29 @@
+package com.mbs;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+
+import com.mbs.repository.CustomerRepository;
+import com.mbs.repository.SalesRepository;
+
+@SpringBootApplication
+public class MilkbillingsystemApplication {
+
+	public static void main(String[] args) {
+		ApplicationContext context=SpringApplication.run(MilkbillingsystemApplication.class, args);
+		
+		CustomerRepository customerRepository= context.getBean(CustomerRepository.class);
+		
+		SalesRepository salesRepository= context.getBean(SalesRepository.class);
+		
+		initializeData(customerRepository,salesRepository);
+		
+	}
+
+	private static void initializeData(CustomerRepository customerRepository, SalesRepository salesRepository) {
+		
+		
+	}
+
+}
